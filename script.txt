@@ -1,0 +1,4 @@
+- Pegar o numero de posições do array;
+- percorrer o array e separar done e todo;
+-- Quando um done é marcado um todo deve ser eliminado da contagem;
+---quando um done é desmarcado um todo deve ser adicionado;

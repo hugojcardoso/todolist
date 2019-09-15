@@ -1,0 +1,28 @@
+body
+{
+  background-color: rgb(170, 170, 170);
+}
+
+span
+{
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.taskList
+{ 
+  background-color: aliceblue;
+  width: 20%;
+  border-radius: 5px;
+}
+
+.buttonRemove
+{
+    color: red;
+    background-color: red;
+}
+
+.done
+{
+  text-decoration: line-through;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./util/angular-1.7.8/angular.min.js"></script>
+    
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>toDoList Hugo</title>
+    <script src="./src/app.js"></script>
+</head>
+<body ng-app='app' ng-controller='appController'>
+    <h1>My toDo List</h1>
+    <div>
+        <div class='input-form'>
+            Insira a tarefa
+            <!--
+                <input type='text' ng-model='newTask' />
+            -->
+            <button ng-click='addTask(newTask)'>Add</button>           
+        </div>
+        <hr>
+            <h2>Dashboard</h2>
+            <h3>tasks: {{tasks}}</h3>
+            <h3>Done: {{doneTasks}}</h3>
+            <h3>toDo: {{todoTasks}}</h3>
+        <hr><!--trocar esta linha-->
+        <div class='taskList'>
+            <div ng-repeat='task in taskList'>
+                <div class='card'>
+                    <div class="container">
+                      <!-- A checkbox displaying the progress -->
+                      <input type='checkbox' ng-model='task.done' />
+                      <!-- An information of a task -->
+                      <span ng-class='{done: task.done}'>{{task.task}}</span>
+                      
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
